@@ -1,4 +1,8 @@
-import path from 'path';
-let pt = path.resolve('./output/client');
-let pt2 = path.join(__dirname, './output/client');
-console.log(pt, pt2);
+
+require("babel-register")({
+  // Optional ignore regex - if any filenames **do** match this regex then they
+  // aren't compiled. 
+  ignore: /(.css|.scss)$/
+});
+
+require('./client/assets/styles/index.css');

@@ -1,8 +1,10 @@
-import {Component} from 'react';
-export default class App extends Component {
+import React from 'react';
+
+import '../assets/styles/index.scss';
+export default class App extends React.Component {
 	render() {
 		return (
-			<div>hello, word</div>
+			<div>hello1234313545578, word</div>
 		)
 	}
 }
