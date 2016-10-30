@@ -1,3 +1,4 @@
+# by xuqinggang
 # person-project
 一：problem
 1.
@@ -67,3 +68,13 @@ module: {
 		}
 	]
 }
+
+5.webpackJsonp is not defined
+是没有引入CommonsChunkPlugin生成了公共文件导致的
+在页面引入生成的公共文件，并且要在其他文件之前引入
+6.nodemon 
+nodemon will watch the files in the directory in which nodemon was started
+可以利用ignore进行忽略
+
+优化：
+1.webpack 生成公共文件

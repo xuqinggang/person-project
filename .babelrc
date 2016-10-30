@@ -1,6 +1,16 @@
 {
 	"presets": ["es2015", "stage-1", "react"],
-	"plugins": ["react-hot-loader/babel"],
+	"plugins": [
+		"react-hot-loader/babel",
+		[
+      		"babel-plugin-module-alias", [
+		        {"src": "./src/client/component", "expose": "component"},
+		        {"src": "./src/client/assets", "expose": "assets"},
+		        {"src": "./node_modules/isomorphic-fetch", "expose": "fetch"}
+      		]
+    	]
+
+	],
 	"ignore": [
 		"client/assets/styles/*.scss"
 	]
