@@ -22,7 +22,7 @@ import register from 'ignore-styles' // ingore style files
 register(['.sass', '.scss'])
 
 
-import App from '../src/client/component/App.jsx';
+import App from '../src/app/index.js';
 
 let app = express();
 
@@ -54,6 +54,7 @@ const initialView = renderToString(
 );
 
 app.use('/', function (req, res, next) {
+	console.log('2')
 	// to access memoryfs index.ejx which htmlwebpackPlugin caches in memory 
   	var filename = path.join(compiler.outputPath,'index.ejs');
 

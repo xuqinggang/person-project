@@ -1,5 +1,10 @@
 {
 	"presets": ["es2015", "stage-1", "react"],
+	"env": {
+    "development": {
+      "presets": ["react-hmre"]
+    }
+  },
 	"plugins": [
 		"react-hot-loader/babel",
 		[
@@ -8,7 +13,8 @@
 		        {"src": "./src/client/assets", "expose": "assets"},
 		        {"src": "./node_modules/isomorphic-fetch", "expose": "fetch"}
       		]
-    	]
+    	],
+    	"transform-decorators-legacy"
 
 	],
 	"ignore": [

@@ -1,0 +1,26 @@
+.m-nav {
+	position: fixed;
+	width: 80%;
+	margin: 0 10%;
+	z-index: 100;
+	overflow: hidden;
+	color: #000;
+	.link {
+		float: left;
+		width: 6rem;
+		height: 4rem;
+		line-height: 4rem;
+		list-style: none;
+		text-align: center;
+		a {
+			cursor: pointer;
+			font-weight: 300;
+		}
+	}
+	.link-active {
+		a {
+			// font-size: 
+			color: red;
+		}
+	}
+}

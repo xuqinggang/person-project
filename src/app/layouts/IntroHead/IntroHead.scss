@@ -1,0 +1,35 @@
+.m_introHead {
+	z-index: 2;
+	// position: relative;
+	overflow: hidden;
+	background-image: linear-gradient(rgba(0, 0, 0, .85), rgba(0, 0, 0, .75));
+}
+.m_intro {
+	height: 24.5rem;
+	overflow: hidden;
+	text-align: center;
+	.intro_bg {
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 24.5rem;
+		opacity: .25;
+		background-color: gray;
+		background-image: url(./topImage2.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	.intro_wrap {
+		margin-top: 8rem;
+	}
+	// background: url();
+	.trickName {
+		font-size: 3rem;
+		font-weight: 200;
+		color: #fff;
+	}
+	.motto {
+		color: rgba(255,255,255,0.75);
+	}
+}
