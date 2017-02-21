@@ -32,6 +32,7 @@ module.exports = {
 					'style',
 					// 'css?modules&localIdentName=[name]_[local]',
 					'css?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]',
+					'resolve-url',
 					'sass?sourceMap=true'
 				]
 			},
@@ -41,13 +42,19 @@ module.exports = {
 				loaders: [
 					'style',
 					'css',
+					'resolve-url',
 					'sass?sourceMap=true'
 				]
 			},
 			{
-		        test: /.(png|jpg)$/, 
-		        loader: 'url?limit=8192&name=img/[hash:8].[name].[ext]'
-      		}
+        test: /.(png|jpg)$/, 
+        loader: 'url?limit=8192&name=img/[hash:8].[name].[ext]'
+      },
+      {test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: 'file-loader?mimetype=image/svg+xml'},
+      {test: /\.woff(\?v=\d+\.\d+\.\d+)?$/, loader: "file-loader?mimetype=application/font-woff"},
+      {test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/, loader: "file-loader?mimetype=application/font-woff"},
+      {test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: "file-loader?mimetype=application/octet-stream"},
+      {test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: "file-loader"},
 		]
 	},
 	plugins: [

@@ -78,3 +78,18 @@ nodemon will watch the files in the directory in which nodemon was started
 
 优化：
 1.webpack 生成公共文件
+
+6.scss 文件中 import相对路径的其他文件时，会报错（提示找不到该文件）
+ ex ： Cannot resolve 'file' or 'directory' ../fonts/fontawesome-webfont.eot 
+ 解决办法：
+ （1）.利用resolve-url-loader
+ 		{
+      test   : /\.scss$/,
+      loaders: ['style-loader', 'css-loader', 'resolve-url-loader', 'sass-loader?sourceMap']
+    }
+	(2)不在scss文件 导入其他文件  而在js文件中进行import
+
+7.
+Module parse failed: G:\web\project\git\person-project\src\app\styles\fonts\font
+awesome-webfont.woff2?v=4.7.0 Unexpected character '
+是webpack没有解析该文件的loader

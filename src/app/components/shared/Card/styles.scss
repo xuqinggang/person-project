@@ -1,0 +1,40 @@
+.m-card {
+	display: block;
+}
+.m-cardTitle {
+	padding: 1rem;
+	.cardTitle-title {
+		color: rgba(0, 0, 0, 0.85);
+		display: block;
+		font-weight: 400;
+		font-size: 1.5rem;
+	}
+	.cardTitle-subTitle {
+		display: block;
+		font-size: .875rem;
+	}
+}
+.m-cardText {
+	padding: 1rem;
+	line-height: 1.45rem;
+	color: rgba(0, 0, 0, 0.75);
+	font-size: .89rem;
+}
+.m-cardFooter {
+	padding: .7rem 1rem;
+	font-size: 0.84rem;
+	color: #999;
+}
+.m-cardActions {
+	padding: .5rem;
+	// color: yellow;
+	.cardActions-action {
+		margin-right: 8px;
+	}
+}
+.test {
+	display: block;
+}
+.ttt {
+	color: blue;
+}

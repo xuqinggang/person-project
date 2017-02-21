@@ -12,6 +12,7 @@ import CSSModules from 'react-css-modules';
 
 import styles from './styles.scss';
 
+@immutableRenderDecorator
 class Tab extends Component {
 	static propTypes = {
 		index: PropTypes.number,
@@ -27,7 +28,6 @@ class Tab extends Component {
 	}
 
 	handleTouchTap = (event) => {
-		console.log('xxxx')
 		if(this.props.onTouchTab) {
 			this.props.onTouchTab(this.props.index, event, this)
 		}

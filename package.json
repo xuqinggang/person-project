@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "babel server -d output/server",
-    "watch": "./node_modules/.bin/webpack-dev-server --port 7777 --devtool module-eval-source-map --hot --inline --content-base .",
+    "watch": "./node_modules/.bin/webpack-dev-server --host 0.0.0.0 --port 7777 --devtool module-eval-source-map --hot --inline --content-base .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "env:server": "cross-env NODE_ENV=development nodemon --exec babel-node server",
     "pro:server": "NODE_ENV=production node output/server"
@@ -21,6 +21,8 @@
     "immutable": "^3.8.1",
     "material-ui": "^0.16.7",
     "react": "^15.3.2",
+    "react-addons-create-fragment": "^15.4.2",
+    "react-addons-transition-group": "^15.4.2",
     "react-css-modules": "^4.1.0",
     "react-dom": "^15.3.2",
     "react-immutable-render-mixin": "^0.9.7",
@@ -28,6 +30,7 @@
     "react-router": "^2.8.1",
     "react-router-redux": "^4.0.7",
     "react-tap-event-plugin": "^1.0.0",
+    "recompose": "^0.22.0",
     "redux": "^3.6.0",
     "redux-composable-fetch": "^0.3.4",
     "redux-devtools": "^3.3.2",
@@ -63,6 +66,7 @@
     "html-webpack-template": "^5.4.1",
     "node-sass": "^3.10.1",
     "react-hot-loader": "^3.0.0-beta.6",
+    "resolve-url-loader": "^1.6.1",
     "sass-loader": "^4.0.2",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",

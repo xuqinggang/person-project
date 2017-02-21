@@ -68,7 +68,6 @@ class Tabs extends Component {
 	}
 	// 由外组件更新时才会调用此方法
 	componentWillReceiveProps(nextProps) {
-		console.log('tabs, componentWillReceiveProps')
 		if('activeIndex' in nextProps) {
 			this.setState({
 				selectedIndex: nextProps.activeIndex,
@@ -78,6 +77,7 @@ class Tabs extends Component {
 	}
 
 	handleTouchTab = (activeIndex) => {
+		console.log('123')
 		const prevIndex = this.state.selectedIndex;
 		if(this.state.selectedIndex !== activeIndex) {
 			this.setState({
@@ -92,7 +92,7 @@ class Tabs extends Component {
 	}
 
 	renderTabNavAndContent() {
-		// console.log('tabs, renderTabNavAndContent')
+
 		const tabs = this.getTabs();
 		// 每一个tab的平均宽度%
 		const width = parseFloat(100 / tabs.length, 10);
@@ -121,7 +121,6 @@ class Tabs extends Component {
 	}
 
 	render() {
-		// console.log('tabs,render')
 		const tabClassName = "m_tabs";
 		const contentContainerClassName = "tabs_contentContainer";
 		const navContainerClassName = "tabs_navContainer"

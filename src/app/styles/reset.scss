@@ -1,3 +1,4 @@
+@import './css/font-awesome.css';
 // css样式重置
 * {
     margin: 0px;
@@ -10,12 +11,31 @@ html {
 
 body {
     overflow-x: hidden;
-    font-family: "Avenir Next", "Avenir", "Segoe UI", "Helvetica Neue", "Helvetica", "HanHei SC", "PingFang SC", "Microsoft YaHei UI", "Microsoft YaHei", sans-serif;
+    font-family: "Microsoft Yahei","Helvetica Neue",Helvetica,Arial,sans-serif;
+    // font-family: "Avenir Next", "Avenir", "Segoe UI", "Helvetica Neue", "Helvetica", "HanHei SC", "PingFang SC", "Microsoft YaHei UI", "Microsoft YaHei", sans-serif;
     font-weight: 400;
     font-size: 1rem;
     line-height: 2;
     color: #404040;
+    letter-spacing: .2px;
 }
 a {
 	text-decoration: none;
 }
+p {
+    line-height: 1.45rem;
+    font-size: .89rem;
+    color: rgba(0, 0, 0, 0.75);
+}
+// code {
+//     padding: 0;
+//     padding-top: .2em;
+//     padding-bottom: .2em;
+//     margin: 0;
+//     font-size: 85%;
+//     background-color: rgba(0,0,0,.04);
+//     border-radius: 3px;
+// }
+// h1, h2, h3 {
+//     font-weight: 400;
+// }
