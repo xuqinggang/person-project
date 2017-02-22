@@ -93,3 +93,6 @@ nodemon will watch the files in the directory in which nodemon was started
 Module parse failed: G:\web\project\git\person-project\src\app\styles\fonts\font
 awesome-webfont.woff2?v=4.7.0 Unexpected character '
 是webpack没有解析该文件的loader
+
+8.（表述不清）enhanceButton组件，中的focusRipple组件 通过按tab键自动定焦，并产生ripple纹浪。但是设定style transform scale时会短暂停顿一下。
+解决方法：利用重排

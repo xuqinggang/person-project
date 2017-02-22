@@ -6,8 +6,9 @@ import React, {
 import classnames from 'classnames';
 import CSSModules from 'react-css-modules';
 
-import EnhanceButton from 'components/shared/internal/EnhanceButton'
-
+import EnhanceButton from 'components/shared/internal/EnhanceButton';
+import FontIcon from 'components/shared/Icon/FontIcon/FontIcon';
+import styles from './IconButton.scss';
 function getStyleNameClass() {
 	return {
 		root:'m-iconButton'
@@ -63,10 +64,9 @@ class IconButton extends Component {
     if (this.props.onMouseEnter) this.props.onMouseEnter(event);
   };
   handleMouseLeave = (event) => {
-    if (!this.refs.button.isKeyboardFocused()) this.hideTooltip();
+    if (!this.refs.button.isKeyBoardFocused()) this.hideTooltip();
     if (this.props.onMouseLeave) this.props.onMouseLeave(event);
   };
-
 	render() {
 		const {
       disabled,
@@ -78,6 +78,16 @@ class IconButton extends Component {
     } = this.props;
 
     const styleNameClass = getStyleNameClass();
+    let fontIcon;
+    if(iconClassName) {
+    	fontIcon = (
+    		<FontIcon
+    			className={iconClassName}
+    		>
+    			{children}
+    		</FontIcon>
+    	)
+    }
 		return (
 			<EnhanceButton
 				{...other}
@@ -92,6 +102,9 @@ class IconButton extends Component {
         onMouseEnter={this.handleMouseEnter}
         onKeyboardFocus={this.handleKeyboardFocus}
 			>			
+
+
+				{fontIcon}
 			</EnhanceButton>
 		)
 	}

@@ -1,12 +1,14 @@
 .m-enhanceButton {
+	position: relative;
 	display: inline-block;
-	width: 30px;
-	height: 20px;
 	margin: 0;
+	width: 48px;
+	height: 48px;
 	padding: 0;
 	font-family: Roboto, sans-serif;
 	outline: none;
 	text-decoration: none;
 	background: none;
 	border: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }

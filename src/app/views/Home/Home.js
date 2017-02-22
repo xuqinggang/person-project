@@ -13,7 +13,7 @@ import { Tabs, Tab } from 'components/shared/Tabs';
 import Card, {CardTitle, CardText, CardFooter, CardActions} from 'components/shared/Card';
 import Paper from 'components/shared/Paper';
 import FontIcon from 'components/shared/Icon/FontIcon/FontIcon';
-// import IconButton from 'components/shared/Icon/FontIcon/FontIcon';
+import IconButton from 'components/shared/Buttons/IconButton/IconButton';;
 import TouchRipple from 'components/shared/internal/TouchRipple';
 import FocusRipple from 'components/shared/internal/FocusRipple';
 import EnHanceButton from 'components/shared/internal/EnHanceButton';
@@ -47,11 +47,12 @@ class Home extends React.Component {
     const { loadArticles, articleList, push } = this.props;
     const test = "test"
     return (
+
       <div styleName={test}>
       <input type="text" onFocus={this.handleFocus} onClick={this.handleClick} onTouchTap={this.handleTouchTap}/>
       <FontIcon  color={'#f44336'}
       hoverColor={'#69f0ae'} className="fa fa-cc-diners-club" />
-      <i className="fa fa-cc-diners-club" aria-hidden="true"></i>
+      
         <Card>
           <CardTitle title="Safari :active伪类失效问题" style={{'paddingBottom':'0px'}}/>
           <CardText style={{'padding':'0rem 1rem'}}>
@@ -67,8 +68,9 @@ class Home extends React.Component {
             <button>123</button>
           </CardActions>
         </Card>
-     
-      1234456551112354600111234124111231<EnHanceButton centerRipple={true}>xxx1</EnHanceButton>
+     <EnHanceButton centerRipple={true}>xxx1</EnHanceButton>
+     <IconButton iconClassName="fa fa-address-book-o">123</IconButton>
+      1234456551112354600111234124111231
         {
           // <h1>Home</h1>
           // <PreviewList {...this.props} />
@@ -82,7 +84,7 @@ class Home extends React.Component {
           </Tab>
         </Tabs>
       <TouchRipple style={{width: '100px', height: '100px'}} bgColor="red">1231tab1</TouchRipple>
-      <FocusRipple style={{width: '100px', height: '100px'}}>qwe123</FocusRipple>
+      
       
       </div>
     );

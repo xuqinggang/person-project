@@ -27,16 +27,17 @@ let listening = false;
 // 是否按tab键
 let tabPressed = false;
 function handleKeyTabPress(event) {
+	console.log(tabPressed);
 	tabPressed = keycode(event) === 'tab';
 }
 // 监听window keyDown事件是否按tab键
 function listenForTabPress() {
 	if(!listening) {
-		Events.on(window, 'keyDown', handleKeyTabPress)
+		Events.on(window, 'keydown', handleKeyTabPress)
 		listening = true;
 	}
 }
-@immutableRenderDecorator
+
 @CSSModules(styles, { allowMultiple: true })
 class EnhanceButton extends Component {
 	static propTypes = {
@@ -94,7 +95,7 @@ class EnhanceButton extends Component {
 			isKeyBoardFocused: false,
 		};
 	}
-	isKeyboardFocused() {
+	isKeyBoardFocused() {
 		return this.state.isKeyboardFocused;
 	}
 	setKeyBoardFocus(event) {
@@ -255,7 +256,6 @@ class EnhanceButton extends Component {
 				centerRipple={centerRipple}
 				opacity={touchRippleOpacity}
 			>
-				{children}
 			</TouchRipple>
 			) : null;
 		console.log(focusRipple, touchRipple);
@@ -263,7 +263,7 @@ class EnhanceButton extends Component {
 			{
 				focusRipple,
 				touchRipple,
-				children: touchRipple ? undefined : children,
+				children: children,
 			}
 		)
 	}
