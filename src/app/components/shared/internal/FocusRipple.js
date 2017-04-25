@@ -19,7 +19,7 @@ const pulsateDuration = 750;
 function getStyleNameClass() {
 	return {
 		root: 'm-focusRipple',
-		ripple: 'focusRipple-transition',
+		ripple: 'focusRipple-innerCircle',
 	}
 }
 

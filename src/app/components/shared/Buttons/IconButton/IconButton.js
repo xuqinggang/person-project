@@ -26,14 +26,17 @@ class IconButton extends Component {
 		href: PropTypes.string,
 		disabled: PropTypes.bool,
 		tooltip: PropTypes.node,
-		tooltipPosition: PropTypes.cornersAndCenter, //'bottom-center' The vertical and horizontal positions, respectively, of the element's tooltip. Possible values are: "bottom-center", "top-center", "bottom-right", "top-right", "bottom-left", and "top-left".
+		// tooltipPosition: PropTypes.cornersAndCenter, //'bottom-center' The vertical and horizontal positions, respectively, of the element's tooltip. Possible values are: "bottom-center", "top-center", "bottom-right", "top-right", "bottom-left", and "top-left".
 		touch: PropTypes.bool, //If true, increase the tooltip element's size. Useful for increasing tooltip readability on mobile devices.
+		disableTouchRipple: PropTypes.bool,
 	}
 	constructor(props) {
 		super(props);
 	}
 	showTooltip() {
+		if(this.props.tooltip) {
 
+		}
 	}
 	hideTooltip() {
 
@@ -44,7 +47,7 @@ class IconButton extends Component {
 		if(this.props.handleBlur) {
 			this.props.onBlur(event);
 		}
-	}
+	};
 	handleFocus = (event) => {
     this.showTooltip();
     if (this.props.onFocus) this.props.onFocus(event);
@@ -72,7 +75,9 @@ class IconButton extends Component {
       disabled,
       disableTouchRipple,
       children,
+      style,
       iconClassName,
+      className,
       onKeyboardFocus, // eslint-disable-line no-unused-vars
       ...other
     } = this.props;
@@ -92,6 +97,8 @@ class IconButton extends Component {
 			<EnhanceButton
 				{...other}
 				styleName={styleNameClass.root}
+				className={className}
+				style={style}
 				ref="button"
 				centerRipple={true}
 				disabled={disabled}
@@ -101,9 +108,7 @@ class IconButton extends Component {
         onMouseLeave={this.handleMouseLeave}
         onMouseEnter={this.handleMouseEnter}
         onKeyboardFocus={this.handleKeyboardFocus}
-			>			
-
-
+			>
 				{fontIcon}
 			</EnhanceButton>
 		)

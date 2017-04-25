@@ -27,7 +27,7 @@ let listening = false;
 // 是否按tab键
 let tabPressed = false;
 function handleKeyTabPress(event) {
-	console.log(tabPressed);
+
 	tabPressed = keycode(event) === 'tab';
 }
 // 监听window keyDown事件是否按tab键
@@ -109,7 +109,6 @@ class EnhanceButton extends Component {
 	}
 	removeKeyBoardFocus(event) {
 		if(this.state.isKeyBoardFocused) {
-			tabPressed = false;
 			this.setState({
 				isKeyBoardFocused: false,
 			});
@@ -148,6 +147,7 @@ class EnhanceButton extends Component {
 	};
 	// touch focus | keyboard 'tab' focus 
 	handleFocus = (event) => {
+
 		if(event) event.persist();
 		if(!this.props.disabled && !this.props.disableKeyBoardFocus) {
 			// setTimeout is needed because the focus event fires first
@@ -167,6 +167,7 @@ class EnhanceButton extends Component {
 	};
 
 	handleTouchTap = (event) => {
+		tabPressed = false;
 		if(!this.props.disabled) {
 			this.cancelFocusTimeout();
 			this.removeKeyBoardFocus(event);
@@ -175,12 +176,14 @@ class EnhanceButton extends Component {
 	};
 
 	handleClick = (event) => {
+		tabPressed = false;
 		if(!this.props.disabled) {
 			this.cancelFocusTimeout();
 			this.removeKeyBoardFocus(event);
 			this.props.onClick(event);
 		}
 	};
+
 	handleBlur = (event) => {
 		if(!this.props.disabled) {
 			this.cancelFocusTimeout();
@@ -188,6 +191,7 @@ class EnhanceButton extends Component {
 			this.props.onBlur(event);
 		}
 	};
+
 	componentWillMount() {
 		const {
 			disabled,
@@ -258,12 +262,11 @@ class EnhanceButton extends Component {
 			>
 			</TouchRipple>
 			) : null;
-		console.log(focusRipple, touchRipple);
 		return createChildFragment(
 			{
 				focusRipple,
 				touchRipple,
-				children: children,
+				children: children ,
 			}
 		)
 	}
@@ -284,6 +287,7 @@ class EnhanceButton extends Component {
       onKeyboardFocus, // eslint-disable-line no-unused-vars
       onTouchTap, // eslint-disable-line no-unused-vars
       disableKeyBoardFocus,
+      disableTouchRipple,
       keyBoardFocus,
       centerRipple,
       ...other,

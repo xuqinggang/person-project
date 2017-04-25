@@ -95,4 +95,30 @@ awesome-webfont.woff2?v=4.7.0 Unexpected character '
 是webpack没有解析该文件的loader
 
 8.（表述不清）enhanceButton组件，中的focusRipple组件 通过按tab键自动定焦，并产生ripple纹浪。但是设定style transform scale时会短暂停顿一下。
-解决方法：利用重排
+解决方法：利用重排.
+(
+  i.e.
+  document.querySelectorAll('.button')[0].onclick = function() {
+      const div = document.createElement('div');
+      div.className = "test"
+      div.innerHTML = "123";
+
+      document.body.appendChild(div);
+      addStyle(div);
+    }
+    function addStyle(el) {
+      //console.log(el.offsetWidth);
+      el.style.transform = "scale(0.5)";
+    }
+  在注释的情况下，div元素会直接显示出缩小一倍后的状态，没有那种从大缩到一半的动作
+  但若是去掉注释，加上el.offsetWidth或者其他可以导致重排的动作，则会出现那种状态
+  (transtion-delay 对这种不好使)
+)
+
+9.
+WARNING in ./src/app/components/shared/internal/EnHanceButton.js
+There is another module with an equal name when case is ignored. //当忽略大小写的时候
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Rename module if multiple modules are expected or use equal casing if one module is expected.
+
+原因：在某处导入 enhanceButton模块的时候，有两处或多处地方导入该模块时，模块名字大小写不一致，

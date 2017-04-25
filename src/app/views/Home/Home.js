@@ -13,10 +13,10 @@ import { Tabs, Tab } from 'components/shared/Tabs';
 import Card, {CardTitle, CardText, CardFooter, CardActions} from 'components/shared/Card';
 import Paper from 'components/shared/Paper';
 import FontIcon from 'components/shared/Icon/FontIcon/FontIcon';
+import EnHanceButton from 'components/shared/internal/EnhanceButton';
 import IconButton from 'components/shared/Buttons/IconButton/IconButton';;
 import TouchRipple from 'components/shared/internal/TouchRipple';
 import FocusRipple from 'components/shared/internal/FocusRipple';
-import EnHanceButton from 'components/shared/internal/EnHanceButton';
 import Test from '../Test/Test'
 import Test2 from '../Test/Test2';
 @immutableRenderDecorator
@@ -69,7 +69,8 @@ class Home extends React.Component {
           </CardActions>
         </Card>
      <EnHanceButton centerRipple={true}>xxx1</EnHanceButton>
-     <IconButton iconClassName="fa fa-address-book-o">123</IconButton>
+
+     <IconButton centerRipple={true} iconClassName="fa fa-address-book-o" style={{fontSize:'23px',width: '50px', height: '50px'}}></IconButton>
       1234456551112354600111234124111231
         {
           // <h1>Home</h1>
