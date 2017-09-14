@@ -17,6 +17,9 @@ class Test2 extends Component {
 		console.log('test23 render')
 		return(
 			<div>
+                123
+                000
+                123
 				child
 			</div>
 		)

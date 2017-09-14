@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Test2 from './Test2';
 import TestDecorator from './TestDecorator';
+// import styles from './styles.scss'
 @TestDecorator
 class Test extends Component {
 	constructor(props) {
@@ -45,10 +46,11 @@ class Test extends Component {
 	render() {
 		console.log('test render')
 		return(
-			<div onClick={this.handleClick}>
-				qwe{this.state.count}
-				<Test2 />
-			</div>
+            <div>123</div>
+			// <div className={ styles.test } onClick={this.handleClick}>
+			// 	qwe{this.state.count}
+			// 	<Test2 />
+			// </div>
 		)
 	}
 }

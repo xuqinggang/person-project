@@ -74,7 +74,7 @@ let webpack_config = {
         alias: {
         	client: dev_env_config.src_client_path,
         	assets: dev_env_config.src_assets_path, // assets path
-        	component: dev_env_config.src_component_path,
+        	components: dev_env_config.src_component_path,
         	// 'react$': path.join(dev_env_config.node_modules_path, 'react/dist/react.min.js'),
         	// 'react-dom$': path.join(dev_env_config.node_modules_path, 'react-dom/dist/react-dom.min.js'),
         	// 'redux$': path.join(dev_env_config.node_modules_path, 'redux/dist/redux.min.js'),

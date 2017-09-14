@@ -1,0 +1,24 @@
+.g-grid-container {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    .grid-row {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .grid-col {
+        box-sizing: border-box;
+        display: flex;
+        flex: 1;
+        &.grid-col-4 {
+            flex-basis: 40%;
+        }
+        &.grid-col-8 {
+            flex-basis: 80%;
+        }
+    }
+
+}

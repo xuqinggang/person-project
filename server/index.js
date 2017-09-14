@@ -1,3 +1,4 @@
+console.log('!!!!!!');
 /***	build tools		***/
 import webpack from 'webpack';
 import webpackDevMiddleware from 'webpack-dev-middleware';
@@ -34,43 +35,43 @@ app.set('view engine', 'ejs');
 let compiler = webpack(webpack_config);
 // development environment
 if (process.env.NODE_ENV === 'development') {
-	console.log('development');
+    console.log('development');
 
-	app.use(webpackDevMiddleware(compiler, {
-		hot: true,
-		publicPath: webpack_config.output.publicPath,
-		stats: {
-			colors: true
-		}
-	}));
-	app.use(webpackHotMiddleware(compiler, {
-		log: console.log
-	}));
+    app.use(webpackDevMiddleware(compiler, {
+        hot: true,
+        publicPath: webpack_config.output.publicPath,
+        stats: {
+            colors: true
+        }
+    }));
+    app.use(webpackHotMiddleware(compiler, {
+        log: console.log
+    }));
 }
 
 const initialView = renderToString(
-	<App>
-	</App>
+    <App>
+    </App>
 );
 
 app.use('/', function (req, res, next) {
-	console.log('2')
-	// to access memoryfs index.ejx which htmlwebpackPlugin caches in memory 
-  	var filename = path.join(compiler.outputPath,'index.ejs');
+    console.log('2')
+    // to access memoryfs index.ejx which htmlwebpackPlugin caches in memory 
+    var filename = path.join(compiler.outputPath,'index.ejs');
 
-  	compiler.outputFileSystem.readFile(filename, 'utf-8', function(err, result){
-	  	let content = ejs.render(result, {
-	    	html: initialView
-		});
+    compiler.outputFileSystem.readFile(filename, 'utf-8', function(err, result){
+        let content = ejs.render(result, {
+            html: initialView
+        });
 
-	    if (err) {
-	      return next(err);
-	    }
+        if (err) {
+            return next(err);
+        }
 
-	    res.set('content-type','text/html');
-	    res.send(content);
-	    res.end();
-  	});
+        res.set('content-type','text/html');
+        res.send(content);
+        res.end();
+    });
 });
 // console.log(assets_path_config,'assets_path_config')
 // console.log('assets_path_config', assets_path_config);
@@ -84,5 +85,5 @@ app.use('/', function (req, res, next) {
 // });
 
 app.listen(3001, () => {
-	console.log('server is listening 3001 port!');
+    console.log('server is listening 3001 port!');
 });

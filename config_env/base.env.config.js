@@ -8,6 +8,6 @@ export default {
 	client_index_path: path.join(ROOTPATH, 'src/app/index.js'),
 	src_client_path: path.join(ROOTPATH, 'src/app'),
 	src_assets_path: path.join(ROOTPATH, 'src/app/assets'),
-	src_component_path: path.join(ROOTPATH, 'src/app/component'),
-	dist_client_path: path.join(ROOTPATH, 'dist/client')
+	src_component_path: path.join(ROOTPATH, 'src/app/components'),
+	dist_client_path: path.join(ROOTPATH, 'dist/app')
 }
