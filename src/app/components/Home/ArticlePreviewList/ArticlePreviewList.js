@@ -1,7 +1,12 @@
-import React from 'react';
-import Preview from './Preview';
-
-class PreviewList extends React.Component {
+import React, { Component } from 'react';
+import CSSModules from 'react-css-modules';
+import ArticlePreview from './ArticlePreview';
+import styles from './style.scss';
+@CSSModules(styles, {
+    allowMultiple: true,
+    handleNotFoundStyleName: 'ignore',
+})
+class ArticlePreviewList extends Component {
     static propTypes = {
         loading: React.PropTypes.bool,
         error: React.PropTypes.bool,
@@ -24,15 +29,16 @@ class PreviewList extends React.Component {
         if (loading) {
             return <p className="message">Loading...</p>;
         }
-
         return (
-            <div>
-                {articleList.map(item => {
-                    return <Preview {...item} key={item.id} push={this.props.push} />
-                })}
+            <div styleName="m-articlePreview-list">
+                <article>
+                    {articleList.map(item => {
+                        return <ArticlePreview {...item} key={item.id} push={this.props.push} />
+                    })}
+                </article>
             </div>
         );
     }
 }
 
-export default PreviewList;
+export default ArticlePreviewList;

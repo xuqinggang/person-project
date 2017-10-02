@@ -1,3 +1,7 @@
+# install
+1. 由于安装node-sass易报错，在全局安装容易
+npm install -g node-sass --sass-binary-site=http://npm.taobao.org/mirrors/node-sass/
+2. 执行npm install
 # by xuqinggang
 # person-project
 一：problem
@@ -122,3 +126,6 @@ This can lead to unexpected behavior when compiling on a filesystem with other c
 Rename module if multiple modules are expected or use equal casing if one module is expected.
 
 原因：在某处导入 enhanceButton模块的时候，有两处或多处地方导入该模块时，模块名字大小写不一致，
+10. node-sass安装报错
+执行： npm install -g node-sass --sass-binary-site=http://npm.taobao.org/mirrors/node-sass/
+

@@ -1,0 +1,40 @@
+.m-articlePreview-list {
+}
+.m-articlePreview {
+    padding-top: 20px;
+    .articlePreview-title {
+        line-height: 1.7;
+        font-size: 26px;
+    }
+    .articlePreview-subTitle {
+        line-height: 1.3;
+        font-size: 16px;
+        font-weight:  300;
+    }
+    .title-text, .subTitle-text {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        color: #404040;
+    }
+    .articlePreview-desc {
+        width: 100%;
+        padding-top: 10px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: #a3a3a3;
+        font-style: italic;
+        font-size: 14px;
+    }
+    .articlePreview-pubLishDate {
+        color: #ccc;
+        font-size: 18px;
+        font-family: Lora,'Times New Roman',serif;
+        font-style: italic;
+    }
+    .articlePreview-segmentLine {
+        margin-top: 20px;
+        border: 0;
+        border-top: 1px solid #eee;
+    }
+}

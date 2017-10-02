@@ -32,10 +32,12 @@ module.exports = {
                     path.join(__dirname, 'src/app/styles'), 
                     path.join(__dirname, 'src/app/views/Test'),
                 ],
+                // loader: ExtractTextPlugin.extract("style?sourceMap", "css?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]!resolve-url!sass?sourceMap")
                 loaders: [
-                    'style',
-                    // 'css?modules&localIdentName=[name]_[local]',
-                    'css?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]',
+                    'style?sourceMap',
+                    'css?modules&localIdentName=[name]_[local]',
+                    'postcss?sourceMap',
+                    // 'css?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]',
                     'resolve-url',
                     'sass?sourceMap=true'
                 ]
@@ -69,6 +71,7 @@ module.exports = {
         ]
     },
     plugins: [
+        // new ExtractTextPlugin('style.css'),
         // new webpack.HotModuleReplacementPlugin(),
         new htmlWebpackPlugin({
             filename: 'index.html',
@@ -84,6 +87,7 @@ module.exports = {
         // 客户端中文件指定某块的引用路径
         alias: {
             components: path.join(__dirname, 'src/app/components'),
+            shared: path.join(__dirname, 'src/app/components/shared'),
             views: path.join(__dirname, 'src/app/views'),
             layouts: path.join(__dirname, 'src/app/layouts'),
             styles: path.join(__dirname, 'src/app/styles'),
