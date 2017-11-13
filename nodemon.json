@@ -1,3 +1,0 @@
-{
-    "ignore": ["/client/*", "/client/**/*", "/client/**/**/*", "/test.js", "/assets.path.config.json"]
-}
