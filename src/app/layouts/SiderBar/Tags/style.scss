@@ -1,0 +1,26 @@
+.m-tags {
+    .tags-title {
+        line-height: 2.6;
+        font-size: 16px;
+        color: #ccc;
+        cursor: pointer;
+        &:hover {
+            color: #0085a1;
+        }
+    }
+    .tags-line {
+        margin-bottom: 8px;
+    }
+    .tags-item-container {
+        padding: 0 4px;
+    }
+    .tags-item {
+        margin: 0 5px 6px 0;
+        color: #bfbfbf; 
+        cursor: pointer;
+        &:hover {
+            border-color: #0085a1;
+            color: #0085a1;
+        }
+    }
+}

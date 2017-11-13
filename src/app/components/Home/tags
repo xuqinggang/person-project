@@ -1,0 +1,39 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	0	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+Preview	Preview.js	/^class Preview extends React.Component {$/;"	C
+title	Preview.js	/^    title: React.PropTypes.string,$/;"	P
+link	Preview.js	/^    link: React.PropTypes.string,$/;"	P
+push	Preview.js	/^    push: React.PropTypes.func,$/;"	P
+handleNavigate	Preview.js	/^  handleNavigate(id, e) {$/;"	M
+render	Preview.js	/^  render() {$/;"	M
+PreviewList	PreviewList.js	/^class PreviewList extends React.Component {$/;"	C
+loading	PreviewList.js	/^        loading: React.PropTypes.bool,$/;"	P
+error	PreviewList.js	/^        error: React.PropTypes.bool,$/;"	P
+articleList	PreviewList.js	/^        articleList: React.PropTypes.arrayOf(React.PropTypes.object),$/;"	P
+loadArticles	PreviewList.js	/^        loadArticles: React.PropTypes.func,$/;"	P
+push	PreviewList.js	/^        push: React.PropTypes.func,$/;"	P
+componentDidMount	PreviewList.js	/^    componentDidMount() {$/;"	M
+render	PreviewList.js	/^    render() {$/;"	M
+if	PreviewList.js	/^        if (error) {$/;"	M
+if	PreviewList.js	/^        if (loading) {$/;"	M
+initialState	PreviewListRedux.js	/^const initialState = {$/;"	O
+loading	PreviewListRedux.js	/^  loading: true,$/;"	P
+error	PreviewListRedux.js	/^  error: false,$/;"	P
+articleList	PreviewListRedux.js	/^  articleList: [],$/;"	P
+LOAD_ARTICLES	PreviewListRedux.js	/^const LOAD_ARTICLES = 'LOAD_ARTICLES';$/;"	V
+LOAD_ARTICLES_SUCCESS	PreviewListRedux.js	/^const LOAD_ARTICLES_SUCCESS = 'LOAD_ARTICLES_SUCCESS';$/;"	V
+LOAD_ARTICLES_ERROR	PreviewListRedux.js	/^const LOAD_ARTICLES_ERROR = 'LOAD_ARTICLES_ERROR';$/;"	V
+types	PreviewListRedux.js	/^    types: [LOAD_ARTICLES, LOAD_ARTICLES_SUCCESS, LOAD_ARTICLES_ERROR],$/;"	P
+url	PreviewListRedux.js	/^    url: '\/src\/api\/articles.json',$/;"	P
+switch	PreviewListRedux.js	/^  switch (action.type) {$/;"	M
+loading	PreviewListRedux.js	/^        loading: true,$/;"	P
+error	PreviewListRedux.js	/^        error: false,$/;"	P
+loading	PreviewListRedux.js	/^        loading: false,$/;"	P
+error	PreviewListRedux.js	/^        error: false,$/;"	P
+articleList	PreviewListRedux.js	/^        articleList: action.payload,$/;"	P
+loading	PreviewListRedux.js	/^        loading: false,$/;"	P
+error	PreviewListRedux.js	/^        error: true,$/;"	P
