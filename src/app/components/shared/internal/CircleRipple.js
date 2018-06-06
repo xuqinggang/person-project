@@ -7,13 +7,13 @@ import React, {
 } from 'react';
 import ReactDom from 'react-dom';
 import classnames from 'classnames';
-import BaseTheme from 'components/shared/styles/muiTheme';
+import BaseTheme from '../styles/muiTheme';
 import shallowEqual from 'recompose/shallowEqual';
 
 import CSSModules from 'react-css-modules';
 
 import styles from './CircleRipple.scss';
-import autoPrefix from 'components/shared/utils/autoPrefix';
+import autoPrefix from '../utils/autoPrefix';
 
 function getStyleName() {
 	return {

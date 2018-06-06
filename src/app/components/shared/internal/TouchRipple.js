@@ -11,12 +11,12 @@ import ReactTransitionGroup from 'react-addons-transition-group';
 import shallowEqual from 'recompose/shallowEqual';
 import CSSModules from 'react-css-modules';
 
-import BaseTheme from 'components/shared/styles/muiTheme';
+import BaseTheme from '../styles/muiTheme';
 import CircleRipple from './CircleRipple'
 import Test from './test'
-import Dom from 'components/shared/utils/Dom';
-import Utils from 'components/shared/utils/Utils';
-import MathCal from 'components/shared/utils/MathCal';
+import Dom from '../utils/Dom';
+import Utils from '../utils/Utils';
+import MathCal from '../utils/MathCal';
 import styles from './TouchRipple.scss'
 
 function getStyleNameClass() {

@@ -3,8 +3,7 @@ import React from 'react';
 import configureStore from './redux/configureStore';
 import { Provider } from 'react-redux';
 import { syncHistoryWithStore } from 'react-router-redux';
-import { browserHistory } from 'react-router';
-import routes from './routes';
+import { createBrowserHistory } from 'history';
 import Frame from 'layouts/Frame';
 // import DevTools from './redux/DevTools';
 import injectTapEventPlugin from "react-tap-event-plugin";
@@ -17,7 +16,7 @@ import Perf from 'react-addons-perf'
 window.Perf = Perf;
 Perf.start();
 const store = configureStore();
-const history = syncHistoryWithStore(browserHistory, store);
+const history = syncHistoryWithStore(createBrowserHistory(), store);
 
 injectTapEventPlugin();
 // ReactDOM.render((
@@ -31,7 +30,7 @@ injectTapEventPlugin();
 // ), document.getElementById('root'));
 ReactDOM.render((
   <Provider store={store}>
-      <Frame />
+      <Frame history={ history } />
   </Provider>
 ), document.getElementById('root'));
 if (module && module.hot) {

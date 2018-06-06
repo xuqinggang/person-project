@@ -5,6 +5,7 @@ import React, {
 import CSSModules from 'react-css-modules';
 import styles from './style.scss';
 import Paper from 'shared/Paper';
+
 @CSSModules(styles, {
     allowMultiple: true,
     handleNotFoundStyleName: 'ignore',

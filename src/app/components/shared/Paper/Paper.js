@@ -54,4 +54,6 @@ class Paper extends Component {
 	}
 }
 
+Paper.displayName = 'Paper';
+
 export default Paper;

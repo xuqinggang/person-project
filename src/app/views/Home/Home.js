@@ -11,6 +11,7 @@ import { Tabs, Tab } from 'components/shared/Tabs';
 import Card, { CardTitle, CardText, CardFooter, CardActions } from 'components/shared/Card';
 import Paper from 'components/shared/Paper';
 import FontIcon from 'components/shared/Icon/FontIcon/FontIcon';
+import Tag from 'components/shared/Tag/Tag';
 import EnHanceButton from 'components/shared/internal/EnhanceButton';
 import IconButton from 'components/shared/Buttons/IconButton/IconButton';;
 import TouchRipple from 'components/shared/internal/TouchRipple';
@@ -68,7 +69,14 @@ class Home extends React.Component {
         const test = "test"
         return (
             <div>
-                    <ArticlePreviewList {...this.props} />
+                <EnHanceButton centerRipple={true}>xxx1</EnHanceButton>
+                <Tag>123</Tag>
+                <IconButton className="tttxxxxx" centerRipple={true} iconClassName="fa fa-address-book-o" style={{fontSize:'23px',width: '50px', height: '50px'}}></IconButton>
+                <FontIcon  color={'#f44336'}
+                    hoverColor={'#69f0ae'} className="fa fa-cc-diners-club" />
+                {
+                    // <ArticlePreviewList {...this.props} />
+                }
             </div>
             
             // <div styleName={test}>

@@ -9,8 +9,8 @@ import ReactDom from 'react-dom';
 
 import CSSModules from 'react-css-modules';
 
-import BaseTheme from 'components/shared/styles/muiTheme';
-import autoPrefix from 'components/shared/utils/autoPrefix';
+import BaseTheme from '../styles/muiTheme';
+import autoPrefix from '../utils/autoPrefix';
 
 import styles from './FocusRipple.scss';
 

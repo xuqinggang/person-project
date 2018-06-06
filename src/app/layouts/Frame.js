@@ -1,7 +1,6 @@
 import React, {
     PropTypes
 } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import CSSModules from 'react-css-modules';
 import IntroHead from 'layouts/IntroHead/IntroHead.js';
 import { Tags } from 'layouts/SiderBar';
@@ -15,9 +14,8 @@ import styles from './style.scss';
 })
 class Frame extends React.Component {
     render() {
-        const { children } = this.props;
+        const { children, history } = this.props;
         return (
-            <Router>
                 <div styleName="m-frame">
                     {
                         // <header>
@@ -28,7 +26,7 @@ class Frame extends React.Component {
                         <div styleName="frame-body">
                             <div styleName="body-content">
                                 {
-                                    routes()
+                                    routes(history)
                                 }
                             </div>
                             <div styleName="body-sidebar">
@@ -49,7 +47,6 @@ class Frame extends React.Component {
                         // </div>
                     }
                 </div>
-            </Router>
         );
     }
 }

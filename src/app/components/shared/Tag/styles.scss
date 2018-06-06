@@ -1,0 +1,21 @@
+.m-tag {
+    display: inline-block;
+    box-sizing: border-box;
+    width: inherit;
+    height: inherit;
+    padding: 0 10px;
+    line-height: 2;
+    border: 1px solid #bfbfbf;
+    border-radius: 999em;
+    font-size: 13px;
+    color: #bfbfbf;
+    &:hover {
+        border-color: #0085a1;
+        color: #0085a1;
+    }
+    &.tag-clicked {
+        border-color: #0085a1;
+        background: #0085a1;
+        color: #fff;
+    }
+}
